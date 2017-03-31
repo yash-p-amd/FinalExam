@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="65f-g9-Xj6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YashExam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WZ-zk-Jz7">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gTr-zr-ixf"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="B1" id="hWc-iA-Hxp">
+                                        <connections>
+                                            <segue destination="DJZ-fe-cVG" kind="show" id="FAR-EU-cuR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="B2" id="DOv-nh-stN">
+                                        <connections>
+                                            <segue destination="CZq-Gk-zJa" kind="show" id="Q22-DJ-6CJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="B3" id="tex-B8-tFd"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xER-N8-h4x">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EXQ-vs-M6a"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ESk-xp-USg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9WZ-zk-Jz7" secondAttribute="trailing" id="AaQ-sR-U31"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9WZ-zk-Jz7" secondAttribute="bottom" id="CBn-55-Bxi"/>
+                            <constraint firstAttribute="trailing" secondItem="xER-N8-h4x" secondAttribute="trailing" id="PYI-v5-dQg"/>
+                            <constraint firstItem="xER-N8-h4x" firstAttribute="trailing" secondItem="9WZ-zk-Jz7" secondAttribute="trailing" id="TMW-Ir-seh"/>
+                            <constraint firstItem="xER-N8-h4x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aYz-LU-laq"/>
+                            <constraint firstItem="xER-N8-h4x" firstAttribute="bottom" secondItem="9WZ-zk-Jz7" secondAttribute="top" id="kJZ-YC-iw3"/>
+                            <constraint firstItem="9WZ-zk-Jz7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lLo-9T-Kev"/>
+                            <constraint firstItem="xER-N8-h4x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sUm-WT-Sm4"/>
+                            <constraint firstItem="xER-N8-h4x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tTZ-Q4-aTc"/>
+                            <constraint firstItem="xER-N8-h4x" firstAttribute="leading" secondItem="9WZ-zk-Jz7" secondAttribute="leading" id="xcY-nP-KHc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OLt-aI-SFN"/>
+                    <connections>
+                        <outlet property="YashTableView" destination="xER-N8-h4x" id="hxW-52-Vce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613.60000000000002" y="-287.40629685157421"/>
+        </scene>
+        <!--Yash Dual Spinner View Controller-->
+        <scene sceneID="GH9-It-ADU">
+            <objects>
+                <viewController id="CZq-Gk-zJa" customClass="YashDualSpinnerViewController" customModule="YashExam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LZP-VD-us5"/>
+                        <viewControllerLayoutGuide type="bottom" id="hw5-2V-ft0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eHI-15-i3K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4k-BD-CDS">
+                                <rect key="frame" x="0.0" y="72" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CZq-Gk-zJa" id="zg6-U4-aQ5"/>
+                                    <outlet property="delegate" destination="CZq-Gk-zJa" id="QBw-9m-e35"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8y-sd-sHT">
+                                <rect key="frame" x="0.0" y="317" width="375" height="30"/>
+                                <state key="normal" title="ALERT"/>
+                                <connections>
+                                    <action selector="YashButtonPresed:" destination="CZq-Gk-zJa" eventType="touchUpInside" id="Zrw-EI-Myj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m4k-BD-CDS" firstAttribute="leading" secondItem="eHI-15-i3K" secondAttribute="leading" id="5bu-V2-jtx"/>
+                            <constraint firstItem="G8y-sd-sHT" firstAttribute="leading" secondItem="eHI-15-i3K" secondAttribute="leading" id="Kso-DL-lU9"/>
+                            <constraint firstItem="m4k-BD-CDS" firstAttribute="top" secondItem="LZP-VD-us5" secondAttribute="bottom" constant="8" id="XeX-Dz-mI7"/>
+                            <constraint firstItem="G8y-sd-sHT" firstAttribute="top" secondItem="m4k-BD-CDS" secondAttribute="bottom" constant="29" id="kdO-Sj-bJW"/>
+                            <constraint firstAttribute="trailing" secondItem="G8y-sd-sHT" secondAttribute="trailing" id="oca-Ru-K8R"/>
+                            <constraint firstAttribute="trailing" secondItem="m4k-BD-CDS" secondAttribute="trailing" id="s0o-7P-Fgc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="YashButton" destination="G8y-sd-sHT" id="si0-q5-OhT"/>
+                        <outlet property="YashDualPicker" destination="m4k-BD-CDS" id="paF-81-zIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSj-XA-DZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="-574"/>
+        </scene>
+        <!--Yash Spin Game-->
+        <scene sceneID="4wd-Zb-DWZ">
+            <objects>
+                <viewController id="DJZ-fe-cVG" customClass="YashSpinGame" customModule="YashExam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6IA-dx-BVB"/>
+                        <viewControllerLayoutGuide type="bottom" id="TRB-ft-FFE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fo5-ey-z1T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1i-V3-CTt">
+                                <rect key="frame" x="0.0" y="72" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DJZ-fe-cVG" id="noP-4E-uau"/>
+                                    <outlet property="delegate" destination="DJZ-fe-cVG" id="v8k-Wn-VrL"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-Ci-NZT">
+                                <rect key="frame" x="0.0" y="296" width="375" height="30"/>
+                                <state key="normal" title="SPIN"/>
+                                <connections>
+                                    <action selector="YashspinTheGame:" destination="DJZ-fe-cVG" eventType="touchUpInside" id="RQp-4C-Lc9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J1i-V3-CTt" secondAttribute="trailing" id="8LH-6L-1Hv"/>
+                            <constraint firstAttribute="trailing" secondItem="FRE-Ci-NZT" secondAttribute="trailing" id="OKP-wR-a6v"/>
+                            <constraint firstItem="FRE-Ci-NZT" firstAttribute="leading" secondItem="fo5-ey-z1T" secondAttribute="leading" id="RoR-gb-npi"/>
+                            <constraint firstItem="J1i-V3-CTt" firstAttribute="top" secondItem="6IA-dx-BVB" secondAttribute="bottom" constant="8" id="XLz-kr-3Q4"/>
+                            <constraint firstItem="J1i-V3-CTt" firstAttribute="leading" secondItem="fo5-ey-z1T" secondAttribute="leading" id="YC2-q8-QR3"/>
+                            <constraint firstItem="FRE-Ci-NZT" firstAttribute="top" secondItem="J1i-V3-CTt" secondAttribute="bottom" constant="8" id="xin-UH-y8T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="YashGameSpiner" destination="J1i-V3-CTt" id="9TP-7H-6NP"/>
+                        <outlet property="YashSpinButton" destination="FRE-Ci-NZT" id="KKD-rh-Fx2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSi-Bb-AKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488.8" y="-684.10794602698661"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nPu-3m-RTZ">
+            <objects>
+                <navigationController id="65f-g9-Xj6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7p6-xd-vls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mr5-Wn-doY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHS-vY-VMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="-287"/>
+        </scene>
+    </scenes>
+</document>
